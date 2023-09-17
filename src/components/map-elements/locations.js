@@ -4,7 +4,7 @@ const biedraLogo = L.icon({
   iconSize: [10, 30],
   iconAnchor: [10, 41],
   popupAnchor: [2, -40],
-  iconUrl: "/biedra-small.png",
+  iconUrl: "/biedra-small-neo.png",
   shadowUrl: "https://unpkg.com/leaflet@1.6/dist/images/marker-shadow.png",
 });
 const shopIcon = L.icon({

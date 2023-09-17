@@ -1,8 +1,7 @@
 import "./styles.css";
-import React, { useEffect, useRef, useState } from "react";
+import React, { useEffect, useRef } from "react";
 import "leaflet/dist/leaflet.css";
 import { MapWithLocation } from "./components/map-elements";
-import { AppBar } from "./components/layout";
 import { locations } from "./components/map-elements";
 import { Marker, Popup } from "react-leaflet";
 import pool from "./pool.mp4";
@@ -11,11 +10,27 @@ export default function App() {
   const videoRef= useRef();
 
   useEffect(() => {
-    videoRef.current.playbackRate = 0.7;
+    videoRef.current.playbackRate = 0.6;
  }, []);
 
   return (
     <>
+    <div 
+     style={{
+      pointerEvents: "none",
+      zIndex: 10000,
+      height: "100vh",
+      position: "absolute",
+      top: 0,
+      left: 0,
+      width: "100vw",
+      padding: 0,
+      objectFit: 'cover',
+      opacity: 0.1,
+      backgroundColor: 'purple',
+      backdropFilter: 'invert(80%)'
+    }}
+    />
       <video
       ref={videoRef}
         playsInline
@@ -33,11 +48,8 @@ export default function App() {
           padding: 0,
           objectFit: 'cover',
           opacity: 0.1,
-          // 'backdrop-filter': 'hue-rotate(120deg)'
-          // backdropFilter: 'hue-rotate(120deg)'
         }}
         preload='metadata'
-        playbackRate={0.4 }
       >
         <source src={pool} type="video/mp4" />
         Your browser does not support the video tag.
@@ -48,7 +60,7 @@ export default function App() {
             class="title-bar-text "
             style={{ width: "100%", fontSize: "20px" }}
           >
-            MAPA BAR BAZAR WITA!
+            mapa lokacji: bazar__plaza 
           </div>
           <div class="title-bar-controls">
             <button
@@ -65,9 +77,9 @@ export default function App() {
         <div class="window-body"></div>
         <MapWithLocation>
           {locations.map((item) => (
-            <Marker position={item.position} icon={item.icon}>
+            <Marker position={item.position} icon={item.icon} key={item.igLink}>
               <Popup>
-                <div class="window" style={{ width: "100%", fontSize: "14px" }}>
+                <div class="window" style={{ width: "100%", fontSize: "14px" }} id={item.name}>
                   <div class="title-bar">
                     <div
                       class="title-bar-text"
