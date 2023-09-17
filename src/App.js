@@ -106,7 +106,7 @@ export default function App() {
                         className="mx-2 px-4"
                         onClick={() => {
                           window.open(
-                            item.googleMapsLink,
+                            item.googleMapsLink.replace('place', 'dir/'),
                             "_blank"
                           );
                         }}
