@@ -104,10 +104,9 @@ export default function App() {
                       </button>
                       <button
                         className="mx-2 px-4"
-                        // style={{border: '3px solid pink'}}
                         onClick={() => {
                           window.open(
-                            `https://www.google.com/maps?saddr=Current+Location&daddr=${item.position[0]},${item.position[1]}`,
+                            item.googleMapsLink,
                             "_blank"
                           );
                         }}
