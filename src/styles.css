@@ -1,0 +1,29 @@
+.App {
+    font-family: sans-serif;
+    text-align: center;
+  }
+  
+  body {
+    margin: 0px
+  }
+
+  .leaflet-marker-icon{
+    height: unset !important;
+    width: unset !important;
+    background-color: transparent;
+    background: none;
+  }
+
+  .leaflet-div-icon{
+    background: none !important;
+    border: none !important;
+    font-weight: 800;
+    color: white;
+    text-align: center;
+  }
+
+  .unique-marker{
+    color: white !important;
+    background-color: rgba(0, 0, 0, 0.773);
+    padding: 1em;
+  }
