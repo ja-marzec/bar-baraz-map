@@ -9,6 +9,7 @@ import pool from "./pool.mp4";
 export default function App() {
   const videoRef = useRef();
   const [isOpenInfo, setOpenInfo] = useState(false);
+  const [visibleLocations, setVisibleLocations] = useState(locations);
 
   useEffect(() => {
     videoRef.current.playbackRate = 0.6;
@@ -142,7 +143,7 @@ export default function App() {
           </div>
         )}
         <MapWithLocation click={() => setOpenInfo(false)}>
-          {locations.map((item) => (
+          {visibleLocations.map((item) => (
             <Marker position={item.position} icon={item.icon} key={item.igLink}>
               <Popup>
                 <div

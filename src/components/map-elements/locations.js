@@ -23,8 +23,15 @@ export const types = {
 };
 
 export const cities = {
-  warszawa: "warszawa",
-  ciechanow: "ciechanów",
+  warszawa: "Warszawa",
+  ciechanow: "Ciechanów",
+  mlawa: 'Mława'
+};
+
+export const citiesLocation = {
+  warszawa: [52.248930846850875, 21.014011050435197],
+  ciechanow: [52.87434650935013, 20.618615308757278],
+  mlawa: [53.112419935074044, 20.38411305248351]
 };
 
 export const locations = [
@@ -189,5 +196,23 @@ export const locations = [
     googleMapsLink:
       "https://www.google.com/maps/place/Centrum+Handlowe+Panorama/@52.1972061,21.0443248,17z/data=!3m1!4b1!4m6!3m5!1s0x471ecd381fe7d0e1:0xa1ec3a2efb6ea095!8m2!3d52.1972029!4d21.0491957!16s%2Fg%2F1tgx5byl?entry=ttu",
     igLink: "https://www.instagram.com/p/CxN4uoBIUfK/?img_index=1",
+  },
+  {
+    type: types.pawilon,
+    name: "Dom Handlowy - Chrobrego 7, Mława",
+    icon: shopIcon,
+    position: [53.11290031172015, 20.38077396488514],
+    googleMapsLink:
+      "https://www.google.com/maps/place/M%C5%82awa+Dom+Handlowy/@53.1129109,20.3807726,15z/data=!4m2!3m1!1s0x0:0x8b0d56566a23cfcc?sa=X&ved=2ahUKEwiN8q3bxtKBAxXtIRAIHX6EAqsQ_BJ6BAhPEAA&ved=2ahUKEwiN8q3bxtKBAxXtIRAIHX6EAqsQ_BJ6BAhYEAg",
+    igLink: "https://www.instagram.com/p/CxqE78Iod6Y/?img_index=1",
+  },
+  {
+    type: types.pawilon,
+    name: "Hala Wola - Człuchowska 25, Warszawa",
+    icon: shopIcon,
+    position: [52.22858207156942, 20.9143612954202],
+    googleMapsLink:
+      "https://www.google.com/maps/place/Hala+Wola+Sp.+z+o.o./@52.2286051,20.9118615,17z/data=!3m1!4b1!4m6!3m5!1s0x471ecb238369aaad:0xa1edf6aecf5f7227!8m2!3d52.2286051!4d20.9144364!16s%2Fg%2F1tf7qwwx?entry=ttu",
+    igLink: "https://www.instagram.com/p/Cxzfd2doq4G/?img_index=1",
   },
 ];
