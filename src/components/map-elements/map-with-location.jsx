@@ -3,9 +3,10 @@ import "leaflet/dist/leaflet.css";
 import icon from "./constants";
 import { LocationMarker } from "./location-marker";
 
-export const MapWithLocation = ({ children }) => {
+export const MapWithLocation = ({ children, click }) => {
   const handleMapClick = (e) => {
     console.log(e);
+    click()
   };
 
   return (

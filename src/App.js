@@ -59,44 +59,17 @@ export default function App() {
         <source src={pool} type="video/mp4" />
         Your browser does not support the video tag.
       </video>
-      <div
-        class="window hidden"
-        style={{
-          width: "320px",
-          height: "100px",
-          position: "absolute",
-          bottom: 0,
-          right: 0,
-          zIndex: 1999,
-        }}
-      >
-        <div class="title-bar">
-          <div class="title-bar-text">Start vibing</div>
-        </div>
-        <div class="window-body">
-          <p> There are just so many possibilities:</p>
-          <ul>
-            <li>A Task Manager</li>
-            <li>A Notepad</li>
-            <li>Or even a File Explorer!</li>
-          </ul>
-        </div>
-        <div class="status-bar">
-          <p class="status-bar-field">Press F1 for help</p>
-          <p class="status-bar-field">Slide 1</p>
-          <p class="status-bar-field">CPU Usage: 14%</p>
-        </div>
-      </div>
+ 
 
-      <div class="window" style={{ width: "100%", fontSize: "14px" }}>
-        <div class="title-bar pl-4 py-1">
+      <div className="window" style={{ width: "100%", fontSize: "14px" }}>
+        <div className="title-bar pl-4 py-1">
           <div
-            class="title-bar-text "
+            className="title-bar-text "
             style={{ width: "100%", fontSize: "20px" }}
           >
             mapa lokacji: bazar__plaza
           </div>
-          <div class="title-bar-controls">
+          <div className="title-bar-controls">
             <button
               className="mr-2"
               style={{ height: "30px", width: "30px" }}
@@ -112,34 +85,33 @@ export default function App() {
             ></button>
           </div>
         </div>
-        <div class="window-body"></div>
+        <div className="window-body"></div>
         {isOpenInfo && (
           <div
-            class="window xl:w-1/4 w-[90%]"
+            className="window xl:w-1/4 w-[90%]"
             style={{
               fontSize: "14px",
               position: "absolute",
-              top: "50%",
+              top: "40%",
               left: "50%",
               transform: "translate(-50%)",
               zIndex: 100000000,
             }}
           >
-            <div class="title-bar">
+            <div className="title-bar">
               <div
-                class="title-bar-text"
+                className="title-bar-text"
                 style={{ width: "100%", fontSize: "14px" }}
               >
                 Info
               </div>
             </div>
-            <div class="window-body">
+            <div className="window-body">
               Hej! Zasady są proste:
               <br />
               <p className="mt-2">
                 Klikając na ikonę otworzysz okienko z informacją o typie lokacji
                 i adresem. Na ten moment są dwie ikony: Biedronki i sklepu.
-                Planuje dodać kolejne już niedługo.
               </p>
               <p className="mt-2">
                 Przyciski:
@@ -154,10 +126,15 @@ export default function App() {
                 </p>
               </p>
               <br />
+              <p>
+                Nad czym pracuję:
+                <p className="mt-1">- Osobne ikonki dla sklepu / centrum handlowego itp. </p>
+                <p className="mt-1">- Filtry po typie obiektu </p>
+                <p className="mt-1">- Filtry po lokacji </p>
+              </p>
               <div className="field-row" style={{ justifyContent: "center" }}>
                 <button
                   className="mx-2 px-4 mt-4"
-                  // style={{border: '3px solid lightblue'}}
                   onClick={toggleInfo}
                 >
                   Zamknij
@@ -166,24 +143,24 @@ export default function App() {
             </div>
           </div>
         )}
-        <MapWithLocation>
+        <MapWithLocation click={() => setOpenInfo(false)}>
           {locations.map((item) => (
             <Marker position={item.position} icon={item.icon} key={item.igLink}>
               <Popup>
                 <div
-                  class="window"
+                  className="window"
                   style={{ width: "100%", fontSize: "14px" }}
                   id={item.name}
                 >
-                  <div class="title-bar">
+                  <div className="title-bar">
                     <div
-                      class="title-bar-text"
+                      className="title-bar-text"
                       style={{ width: "100%", fontSize: "14px" }}
                     >
                       {item.name}
                     </div>
                   </div>
-                  <div class="window-body">
+                  <div className="window-body">
                     <div
                       className="field-row"
                       style={{ justifyContent: "center" }}
