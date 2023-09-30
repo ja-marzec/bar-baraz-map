@@ -1,7 +1,5 @@
 import { MapContainer, TileLayer, Marker, Popup } from "react-leaflet";
 import "leaflet/dist/leaflet.css";
-import icon from "./constants";
-import { LocationMarker } from "./location-marker";
 
 export const MapWithLocation = ({ children, click }) => {
   const handleMapClick = (e) => {

@@ -59,8 +59,6 @@ export default function App() {
         <source src={pool} type="video/mp4" />
         Your browser does not support the video tag.
       </video>
- 
-
       <div className="window" style={{ width: "100%", fontSize: "14px" }}>
         <div className="title-bar pl-4 py-1">
           <div
@@ -116,22 +114,22 @@ export default function App() {
               <p className="mt-2">
                 Przyciski:
                 <br />
-                <p className="mt-1">
+                <span className="mt-1 block">
                   - <span style={{ fontWeight: 600 }}>Link do opisu: </span>{" "}
                   prowadzi do instagrama
-                </p>
-                <p className="mt-1">
+                </span>
+                <span className="mt-1 block">
                   - <span style={{ fontWeight: 600 }}>Sprawdź dojazd: </span>{" "}
                   kieruje do map google
-                </p>
+                </span>
               </p>
               <br />
-              <p>
+              <span className="block">
                 Nad czym pracuję:
-                <p className="mt-1">- Osobne ikonki dla sklepu / centrum handlowego itp. </p>
-                <p className="mt-1">- Filtry po typie obiektu </p>
-                <p className="mt-1">- Filtry po lokacji </p>
-              </p>
+                <span className="mt-1 block">- Osobne ikonki dla sklepu / centrum handlowego itp. </span>
+                <span className="mt-1 block">- Filtry po typie obiektu </span>
+                <span className="mt-1 block">- Filtry po lokacji </span>
+              </span>
               <div className="field-row" style={{ justifyContent: "center" }}>
                 <button
                   className="mx-2 px-4 mt-4"
