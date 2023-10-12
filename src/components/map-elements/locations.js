@@ -38,6 +38,7 @@ export const locations = [
   {
     type: types.biedronka,
     name: "Biedronka - Niemcewicza 26, Warszawa",
+    city: cities.warszawa,
     icon: biedraLogo,
     position: [52.22195, 20.98016],
     googleMapsLink:
@@ -47,6 +48,7 @@ export const locations = [
   {
     type: types.biedronka,
     name: "Biedronka - Korytyńskiego 23, Warszawa",
+    city: cities.warszawa,
     icon: biedraLogo,
     position: [52.203763, 20.964675],
     googleMapsLink:
@@ -56,6 +58,7 @@ export const locations = [
   {
     type: types.biedronka,
     name: "Biedronka - Dobosza 12, Warszawa",
+    city: cities.warszawa,
     icon: biedraLogo,
     position: [52.211144454415845, 20.96641030491566],
     googleMapsLink:
@@ -65,6 +68,9 @@ export const locations = [
   {
     type: types.biedronka,
     name: "Biedronka - Pruszkowska 4D, Warszawa",
+    city: cities.warszawa,
+
+
     icon: biedraLogo,
     position: [52.201828398854644, 20.981643069551392],
     googleMapsLink:
@@ -74,6 +80,8 @@ export const locations = [
   {
     type: types.biedronka,
     name: "Biedronka - Jutrzenki 177, Warszawa",
+    city: cities.warszawa,
+
     icon: biedraLogo,
     position: [52.20145300318825, 20.937493839591394],
     googleMapsLink:
@@ -83,6 +91,7 @@ export const locations = [
   {
     type: types.biedronka,
     name: "Biedronka - Aleja Krakowska 246, Warszawa",
+    city: cities.warszawa,
     icon: biedraLogo,
     position: [52.18944673336071, 20.95857033243662],
     googleMapsLink:
@@ -92,6 +101,7 @@ export const locations = [
   {
     type: types.biedronka,
     name: "Biedronka - Białobrzeska 6, Warszawa",
+    city: cities.warszawa,
     icon: biedraLogo,
     position: [52.20871034655008, 20.969935906532847],
     googleMapsLink:
@@ -101,6 +111,7 @@ export const locations = [
   {
     type: types.biedronka,
     name: "Biedronka - Grójecka 194, Warszawa",
+    city: cities.warszawa,
     icon: biedraLogo,
     position: [52.20023118123725, 20.966428913298717],
     googleMapsLink:
@@ -110,6 +121,7 @@ export const locations = [
   {
     type: types.biedronka,
     name: "Biedronka - Kochanowskiego 45/47, Warszawa",
+    city: cities.warszawa,
     icon: biedraLogo,
     position: [52.27009569428032, 20.938473308411936],
     googleMapsLink:
@@ -119,6 +131,7 @@ export const locations = [
   {
     type: types.biedronka,
     name: "Biedronka - Dąbrowskiej 15, Warszawa",
+    city: cities.warszawa,
     icon: biedraLogo,
     position: [52.273575007233056, 20.93082946890176],
     googleMapsLink:
@@ -128,6 +141,7 @@ export const locations = [
   {
     type: types.pawilon,
     name: "Pawilon handlowy - Hala Kopińska - ppłk. Grzymały-Sokołowskiego 2, Warszawa",
+    city: cities.warszawa,
     icon: shopIcon,
     position: [52.21832777306688, 20.97702296012556],
     googleMapsLink:
@@ -137,6 +151,7 @@ export const locations = [
   {
     type: types.pawilon,
     name: "Pawilon handlowy - Pabla Nerudy 1, Warszawa",
+    city: cities.warszawa,
     icon: shopIcon,
     position: [52.2759938480657, 20.927240314333954],
     googleMapsLink:
@@ -146,6 +161,7 @@ export const locations = [
   {
     type: types.sklep,
     name: "E. Leclerc -  Aspekt 79, Warszawa",
+    city: cities.warszawa,
     icon: shopIcon,
     position: [52.27801458405868, 20.931062512981473],
     googleMapsLink:
@@ -155,6 +171,7 @@ export const locations = [
   {
     type: types.sklep,
     name: "FRAC - Karolkowa 30, Warszawa",
+    city: cities.warszawa,
     icon: shopIcon,
     position: [52.231668685271764, 20.977970641918205],
     googleMapsLink:
@@ -164,6 +181,7 @@ export const locations = [
   {
     type: types.biedronka,
     name: "Biedronka - Powstańców Śląskich 9, Warszawa",
+    city: cities.warszawa,
     icon: biedraLogo,
     position: [52.22485147922153, 20.91585404750283],
     googleMapsLink:
@@ -173,6 +191,7 @@ export const locations = [
   {
     type: types.pawilon,
     name: "Pawilon handlowy - Bliska 12, Warszawa",
+    city: cities.warszawa,
     icon: shopIcon,
     position: [52.24924410415787, 21.05708539092222],
     googleMapsLink:
@@ -182,6 +201,7 @@ export const locations = [
   {
     type: types.pawilon,
     name: "Pawilon handlowy - Kościuszki 14, Ciechanów",
+    city: cities.ciechanow,
     icon: shopIcon,
     position: [52.87632170227678, 20.617351118244553],
     googleMapsLink:
@@ -191,6 +211,7 @@ export const locations = [
   {
     type: types.centrumHandlowe,
     name: "Centrum Handlowe Panorama - Wincentego Witosa 31, Warszawa",
+    city: cities.warszawa,
     icon: shopIcon,
     position: [52.19707519093376, 21.049090797734717],
     googleMapsLink:
@@ -200,6 +221,7 @@ export const locations = [
   {
     type: types.pawilon,
     name: "Dom Handlowy - Chrobrego 7, Mława",
+    city: cities.mlawa,
     icon: shopIcon,
     position: [53.11290031172015, 20.38077396488514],
     googleMapsLink:
@@ -209,6 +231,7 @@ export const locations = [
   {
     type: types.pawilon,
     name: "Hala Wola - Człuchowska 25, Warszawa",
+    city: cities.warszawa,
     icon: shopIcon,
     position: [52.22858207156942, 20.9143612954202],
     googleMapsLink:

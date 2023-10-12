@@ -27,3 +27,9 @@
     background-color: rgba(0, 0, 0, 0.773);
     padding: 1em;
   }
+
+  select{
+    width: 130px;
+    padding-left: 8px;
+    font-size: 16px;
+  }

@@ -2,18 +2,24 @@ import "./styles.css";
 import React, { useEffect, useRef, useState } from "react";
 import "leaflet/dist/leaflet.css";
 import { MapWithLocation } from "./components/map-elements";
-import { locations } from "./components/map-elements";
+import { locations, cities, citiesLocation } from "./components/map-elements";
 import { Marker, Popup } from "react-leaflet";
 import pool from "./pool.mp4";
 
 export default function App() {
   const videoRef = useRef();
   const [isOpenInfo, setOpenInfo] = useState(false);
+  const [selectedCity, setSelectedCity] = useState(null);
   const [visibleLocations, setVisibleLocations] = useState(locations);
+  const [mapPosition, setMapPosition] = useState(citiesLocation.warszawa)
 
   useEffect(() => {
     videoRef.current.playbackRate = 0.6;
   }, []);
+
+  useEffect(() => {
+    setMapPosition(citiesLocation[selectedCity])
+  },[selectedCity])
 
   const toggleInfo = () => {
     setOpenInfo(!isOpenInfo);
@@ -69,6 +75,15 @@ export default function App() {
             mapa lokacji: bazar__plaza
           </div>
           <div className="title-bar-controls">
+            <select
+              className="mr-4 mt-1"
+              onChange={(e) => setSelectedCity(e.target.value)}
+              defaultValue={selectedCity}
+            >
+              {Object.entries(cities).map(([key, value]) => (
+                <option key={key} value={key}>{value}</option>
+              ))}
+            </select>
             <button
               className="mr-2"
               style={{ height: "30px", width: "30px" }}
@@ -79,7 +94,10 @@ export default function App() {
               style={{ height: "30px", width: "30px" }}
               aria-label="Close"
               onClick={() => {
-                window.open("https://shattereddisk.github.io/rickroll/rickroll.mp4", "_blank")
+                window.open(
+                  "https://shattereddisk.github.io/rickroll/rickroll.mp4",
+                  "_blank"
+                );
               }}
             ></button>
           </div>
@@ -127,22 +145,21 @@ export default function App() {
               <br />
               <span className="block">
                 Nad czym pracuję:
-                <span className="mt-1 block">- Osobne ikonki dla sklepu / centrum handlowego itp. </span>
+                <span className="mt-1 block">
+                  - Osobne ikonki dla sklepu / centrum handlowego itp.{" "}
+                </span>
                 <span className="mt-1 block">- Filtry po typie obiektu </span>
                 <span className="mt-1 block">- Filtry po lokacji </span>
               </span>
               <div className="field-row" style={{ justifyContent: "center" }}>
-                <button
-                  className="mx-2 px-4 mt-4"
-                  onClick={toggleInfo}
-                >
+                <button className="mx-2 px-4 mt-4" onClick={toggleInfo}>
                   Zamknij
                 </button>
               </div>
             </div>
           </div>
         )}
-        <MapWithLocation click={() => setOpenInfo(false)}>
+        <MapWithLocation click={() => setOpenInfo(false)} position={mapPosition}>
           {visibleLocations.map((item) => (
             <Marker position={item.position} icon={item.icon} key={item.igLink}>
               <Popup>
