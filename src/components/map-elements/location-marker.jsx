@@ -5,7 +5,7 @@ import icon from "./constants";
 
 export const LocationMarker = () => {
     const [position, setPosition] = useState(null);
-    const [bbox, setBbox] = useState([]);
+    const [setBbox] = useState([]);
     const map = useMap();
 
     useEffect(() => {
@@ -18,7 +18,7 @@ export const LocationMarker = () => {
         setBbox(e.bounds.toBBoxString().split(","));
       });
       map.on("click", (e) => {
-        console.log(e);
+        // console.log(e);
       });
     }, [map]);
 

@@ -11,7 +11,7 @@ export const PolygonWithText = ({ coords, html, onClick }) => {
       <Polygon
         color="black"
         positions={coords}
-        onClick={() => console.log("this works")}
+        // onClick={() => console.log("this works")}
         eventHandlers={{
           click: onClick,
         }}

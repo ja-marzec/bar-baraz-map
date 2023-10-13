@@ -6,7 +6,6 @@ export const MoveToLocation = ({cityPosition}) => {
     const [position] = useState(null);
     const map = useMap();
 
-  console.log(cityPosition)
     useEffect(() => {
       if(cityPosition) {
         map.flyTo({lat: cityPosition[0], lng: cityPosition[1]}, map.getZoom());
