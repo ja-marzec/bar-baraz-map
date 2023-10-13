@@ -9,11 +9,11 @@ export default function App() {
   const [isOpenInfo, setOpenInfo] = useState(false);
   const [selectedCity, setSelectedCity] = useState(null);
   const [visibleLocations] = useState(locations);
-  const [mapPosition, setMapPosition] = useState(citiesLocation.warszawa)
+  const [mapPosition, setMapPosition] = useState(citiesLocation.warszawa);
 
   useEffect(() => {
-    setMapPosition(citiesLocation[selectedCity])
-  },[selectedCity])
+    setMapPosition(citiesLocation[selectedCity]);
+  }, [selectedCity]);
 
   const toggleInfo = () => {
     setOpenInfo(!isOpenInfo);
@@ -52,24 +52,16 @@ export default function App() {
               defaultValue={selectedCity}
             >
               {Object.entries(cities).map(([key, value]) => (
-                <option key={key} value={key}>{value}</option>
+                <option key={key} value={key}>
+                  {value}
+                </option>
               ))}
             </select>
             <button
               className="mr-2"
-              style={{ height: "30px", width: "30px", color: 'white' }}
+              style={{ height: "30px", width: "30px", color: "white" }}
               aria-label="Help"
               onClick={toggleInfo}
-            ></button>
-            <button
-              style={{ height: "30px", width: "30px" }}
-              aria-label="Close"
-              onClick={() => {
-                window.open(
-                  "https://shattereddisk.github.io/rickroll/rickroll.mp4",
-                  "_blank"
-                );
-              }}
             ></button>
           </div>
         </div>
@@ -130,9 +122,16 @@ export default function App() {
             </div>
           </div>
         )}
-        <MapWithLocation click={() => setOpenInfo(false)} position={mapPosition}>
+        <MapWithLocation
+          click={() => setOpenInfo(false)}
+          position={mapPosition}
+        >
           {visibleLocations.map((item) => (
-            <Marker position={item.position} icon={item.icon} key={item.igLink}>
+            <Marker
+              position={item.position}
+              icon={item.icon}
+              key={item.igLink}
+            >
               <Popup>
                 <div
                   className="window"
