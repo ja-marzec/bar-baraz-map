@@ -12,6 +12,7 @@ export const MapWithLocation = ({ children, position }) => {
       maxZoom={18}
       scrollWheelZoom
       style={{ height: "96vh", maxWidth: "100vw" }}
+      zoomControl={false}
     >
       <TileLayer
         attribution='&copy; <a href="http://osm.org/copyright">OpenStreetMap</a> contributors'
