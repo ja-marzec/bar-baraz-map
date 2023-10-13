@@ -1,11 +1,11 @@
 import { useEffect, useState } from "react";
-import { Marker, Popup, useMap } from "react-leaflet";
-import L from "leaflet";
+import { Marker, useMap } from "react-leaflet";
 import icon from "./constants";
 
 export const MoveToLocation = ({cityPosition}) => {
-    const [position, setPosition] = useState(null);
+    const [position] = useState(null);
     const map = useMap();
+
   console.log(cityPosition)
     useEffect(() => {
       if(cityPosition) {

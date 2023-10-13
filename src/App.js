@@ -1,21 +1,15 @@
 import "./styles.css";
-import React, { useEffect, useRef, useState } from "react";
+import React, { useEffect, useState } from "react";
 import "leaflet/dist/leaflet.css";
 import { MapWithLocation } from "./components/map-elements";
 import { locations, cities, citiesLocation } from "./components/map-elements";
 import { Marker, Popup } from "react-leaflet";
-import pool from "./pool.mp4";
 
 export default function App() {
-  const videoRef = useRef();
   const [isOpenInfo, setOpenInfo] = useState(false);
   const [selectedCity, setSelectedCity] = useState(null);
-  const [visibleLocations, setVisibleLocations] = useState(locations);
+  const [visibleLocations] = useState(locations);
   const [mapPosition, setMapPosition] = useState(citiesLocation.warszawa)
-
-  useEffect(() => {
-    videoRef.current.playbackRate = 0.6;
-  }, []);
 
   useEffect(() => {
     setMapPosition(citiesLocation[selectedCity])
@@ -27,7 +21,7 @@ export default function App() {
 
   return (
     <>
-      <div
+      {/* <div
         style={{
           pointerEvents: "none",
           zIndex: 10000,
@@ -42,37 +36,14 @@ export default function App() {
           backgroundColor: "purple",
           backdropFilter: "invert(80%)",
         }}
-      />
-      <video
-        ref={videoRef}
-        playsInline
-        autoPlay
-        muted
-        loop
-        style={{
-          pointerEvents: "none",
-          zIndex: 10000,
-          height: "100vh",
-          position: "absolute",
-          top: 0,
-          left: 0,
-          width: "100vw",
-          padding: 0,
-          objectFit: "cover",
-          opacity: 0.1,
-        }}
-        preload="metadata"
-      >
-        <source src={pool} type="video/mp4" />
-        Your browser does not support the video tag.
-      </video>
+      /> */}
       <div className="window" style={{ width: "100%", fontSize: "14px" }}>
-        <div className="title-bar pl-4 py-1">
+        <div className="title-bar pl-4 py-1 navbar">
           <div
             className="title-bar-text "
             style={{ width: "100%", fontSize: "20px" }}
           >
-            mapa lokacji: bazar__plaza
+            bazar__plaza
           </div>
           <div className="title-bar-controls">
             <select
@@ -86,7 +57,7 @@ export default function App() {
             </select>
             <button
               className="mr-2"
-              style={{ height: "30px", width: "30px" }}
+              style={{ height: "30px", width: "30px", color: 'white' }}
               aria-label="Help"
               onClick={toggleInfo}
             ></button>

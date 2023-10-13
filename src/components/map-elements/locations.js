@@ -238,4 +238,24 @@ export const locations = [
       "https://www.google.com/maps/place/Hala+Wola+Sp.+z+o.o./@52.2286051,20.9118615,17z/data=!3m1!4b1!4m6!3m5!1s0x471ecb238369aaad:0xa1edf6aecf5f7227!8m2!3d52.2286051!4d20.9144364!16s%2Fg%2F1tf7qwwx?entry=ttu",
     igLink: "https://www.instagram.com/p/Cxzfd2doq4G/?img_index=1",
   },
+  {
+    type: types.centrumHandlowe,
+    name: "Fort Wola - fasada - Fort Wola 22, Warszawa ",
+    city: cities.warszawa,
+    icon: shopIcon,
+    position: [52.223544818374336, 20.928236543433602],
+    googleMapsLink:
+      "https://www.google.com/maps/place/Centrum+Handlowe+Fort+Wola/@52.223627,20.9255329,17z/data=!3m1!4b1!4m6!3m5!1s0x471ecb391f281425:0x7764c9646aa0829e!8m2!3d52.223627!4d20.9281078!16s%2Fg%2F1219mqww?entry=ttu",
+    igLink: "https://www.instagram.com/p/CyBclyzoJSY/?img_index=1",
+  },
+  {
+    type: types.pawilon,
+    name: "Zieleniak - Grójecka 97, Warszawa",
+    city: cities.warszawa,
+    icon: shopIcon,
+    position: [52.20876487846264, 20.97568013766895],
+    googleMapsLink:
+      "https://www.google.com/maps/place/Zieleniak/@52.2088376,20.975192,87m/data=!3m1!1e3!4m6!3m5!1s0x471eccb037672399:0x7eb00b1dab38216d!8m2!3d52.2087659!4d20.9757188!16s%2Fg%2F11cs1jhq9l?entry=ttu",
+    igLink: "https://www.instagram.com/p/CyN_jQWIT-3/?img_index=1",
+  },
 ];
