@@ -258,4 +258,24 @@ export const locations = [
       "https://www.google.com/maps/place/Zieleniak/@52.2088376,20.975192,87m/data=!3m1!1e3!4m6!3m5!1s0x471eccb037672399:0x7eb00b1dab38216d!8m2!3d52.2087659!4d20.9757188!16s%2Fg%2F11cs1jhq9l?entry=ttu",
     igLink: "https://www.instagram.com/p/CyN_jQWIT-3/?img_index=1",
   },
+  {
+    type: types.centrumHandlowe,
+    name: "Galeria Ursynów - aleja KEN 36, Warszawa",
+    city: cities.warszawa,
+    icon: shopIcon,
+    position: [52.13971640367072, 21.058482354112524],
+    googleMapsLink:
+      "https://www.google.com/maps/place/Galeria+Ursyn%C3%B3w/@52.1401514,21.063021,16z/data=!4m6!3m5!1s0x47192d9d573c7773:0xe62395dd1c64a2cd!8m2!3d52.1396971!4d21.0586222!16s%2Fg%2F1wbrwjbs?entry=ttu",
+    igLink: "https://www.instagram.com/p/Cydmr2hIaJ9/?img_index=1",
+  },
+  {
+    type: types.pawilon,
+    name: "Pawilon Handlowy - Grójecka 128, Warszawa",
+    city: cities.warszawa,
+    icon: shopIcon,
+    position: [52.20440592487324, 20.97015882209056],
+    googleMapsLink:
+      "https://www.google.com/maps/place/Gr%C3%B3jecka+128,+02-383+Warszawa/@52.2044125,20.970132,17z/data=!3m1!4b1!4m6!3m5!1s0x471eccb27969d5a7:0xefc280e5d7b9fd4b!8m2!3d52.2044125!4d20.970132!16s%2Fg%2F11c1zrp8jp?entry=ttu",
+    igLink: "https://www.instagram.com/p/Cyq0BZ4IMyG/?img_index=1",
+  },
 ];
